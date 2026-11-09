@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>My items</h1>
+{% if session.user_id %}
+<form method='post' action="{{ url_for('pages.add_item') }}" class='add-form'>
+  <input name='name' placeholder='Name' required>
+  <input name='description' placeholder='Description'>
+  <button type='submit'>Add item</button>
+</form>
+{% endif %}
+{% for item in items %}
+  <div class='item-card'>
+    <h2>{{ item.name }}</h2>
+    <p>{{ item.description }}</p>
+  </div>
+{% else %}
+  <p>No items yet.</p>
+{% endfor %}
+{% endblock %}

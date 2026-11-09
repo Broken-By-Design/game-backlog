@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <title>{% block title %}My App{% endblock %}</title>
+  <link rel='stylesheet' href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav>
+    <a href="{{ url_for('pages.home') }}">Home</a>
+    {% if session.user_id %}
+      <form method='post' action="{{ url_for('pages.logout') }}">
+        <button type='submit'>Logout</button>
+      </form>
+    {% else %}
+      <a href="{{ url_for('pages.login') }}">Login</a>
+      <a href="{{ url_for('pages.register') }}">Register</a>
+    {% endif %}
+  </nav>
+
+  {% for message in get_flashed_messages() %}
+    <p class='flash'>{{ message }}</p>
+  {% endfor %}
+
+  {% block content %}{% endblock %}
+</body>
+</html>

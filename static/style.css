@@ -1,0 +1,125 @@
+:root {
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --text: #1f2430;
+  --muted: #5d6676;
+  --border: #dde1e8;
+  --accent: #3b6ef5;
+  --accent-hover: #2f5bd4;
+  --on-accent: #ffffff;
+  --flash-bg: rgba(59, 110, 245, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171d;
+    --card: #1c2029;
+    --text: #e6e9f0;
+    --muted: #9aa3b2;
+    --border: #2c3240;
+    --accent: #6c93ff;
+    --accent-hover: #88a6ff;
+    --on-accent: #0d1117;
+    --flash-bg: rgba(108, 147, 255, 0.16);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg); }
+
+body {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+h1 { font-size: 1.6rem; margin: 0 0 1rem; }
+
+/* nav */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+nav a { color: var(--accent); text-decoration: none; font-weight: 600; }
+nav a:hover { color: var(--accent-hover); }
+nav form { display: block; max-width: none; margin: 0 0 0 auto; }
+
+/* forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 22rem;
+}
+
+.add-form {
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: none;
+  margin-bottom: 1.5rem;
+}
+
+.add-form input { flex: 1 1 10rem; }
+
+input {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--text);
+  font: inherit;
+}
+
+input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+button {
+  padding: 0.6rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover { background: var(--accent-hover); }
+
+nav button {
+  padding: 0.35rem 0.8rem;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  font-weight: 400;
+}
+
+nav button:hover { background: transparent; color: var(--text); }
+
+/* flash messages (errors and success both use this) */
+.flash {
+  margin: 0 0 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  background: var(--flash-bg);
+}
+
+/* items */
+.item-card {
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.item-card h2 { margin: 0 0 0.25rem; font-size: 1.1rem; }
+.item-card p { margin: 0; color: var(--muted); }
