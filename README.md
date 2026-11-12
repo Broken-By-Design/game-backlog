@@ -6,11 +6,15 @@ Here you can see a Python/Flask + MongoDB application
 
 Connect it to your own mongoDB server
 
+I recommend using a local server, using mongoDB server community edition
+
+I will add the tutorial video here soon once It is done
+
 This code is A basic implementation of a Python/Flask + MongoDB server  
 I **URGE** people to go and look more in depth into the topic to expand their own skills  
 Or learn a language like Go or Rust  
 
-I may have a go/Fibre tutorial soon to!  
+I may have a go/Fiber tutorial soon to!  
 
 Have a good one!
 
