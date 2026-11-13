@@ -12,9 +12,11 @@ I will add the tutorial video here soon once It is done
 
 This code is A basic implementation of a Python/Flask + MongoDB server  
 I **URGE** people to go and look more in depth into the topic to expand their own skills  
-Or learn a language like Go or Rust  
+Or learn a language like Go or Rust
 
-I may have a go/Fiber tutorial soon to!  
+I may have a go/Fiber tutorial soon to!
+
+The youtube tutorial will be posted soon!
 
 Have a good one!
 
